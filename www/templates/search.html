@@ -1,0 +1,8 @@
+<ion-view view-title="PDF Viewer">
+  <ion-content>
+    <div class="wrapper" ng-controller="DocCtrl">
+    	<h1>{{pdfName}}</h1>
+        <ng-pdf template-url="partials/viewer.html" canvasid="pdf" scale="1" page=1></ng-pdf>
+    </div>
+  </ion-content>
+</ion-view>

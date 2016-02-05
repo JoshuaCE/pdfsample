@@ -1,0 +1,12 @@
+/* Empty. Add your own CSS if you like */
+.pdfViewerWrapper{
+	overflow:auto;
+}
+.pdf_nav button{
+	border:1px solid #eee !important;
+	margin:5px;
+}
+.pdf_nav p{
+	padding-top:20px;
+	font-weight:600;
+}
