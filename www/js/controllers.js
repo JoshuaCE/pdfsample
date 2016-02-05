@@ -51,11 +51,16 @@ angular.module('starter.controllers', ['starter.services'])
 
 .controller('DocCtrl', function($scope){
 	//$scope.httpHeaders = { Authorization: 'Bearer some-aleatory-token' };
-	$scope.pdfName = 'Relativity: The Special and General Theory by Albert Einstein';
+	$scope.pdfName = 'Relativity: Theory by Albert Einstein';
 	//$scope.pdfUrl = 'http://192.168.1.28:8100/pdf/relativity.pdf';	
 	$scope.pdfUrl = './pdf/relativity.pdf';
 	$scope.scroll = 1;
 	$scope.loading = 'loading';
+	
+	//$scope.setHeight = function(){
+		$scope.winheight = window.innerHeight;
+	//}
+	//console.log($scope.winheight);
   
 	$scope.getNavStyle = function(scroll) {
 	  if(scroll > 100) return 'pdf-controls fixed';

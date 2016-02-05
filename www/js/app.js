@@ -40,8 +40,8 @@ angular.module('starter', ['ionic', 'starter.controllers','pdf'])
       }
     }
   })
-/*
-  .state('app.browse', {
+
+  /*.state('app.browse', {
       url: '/browse',
       views: {
         'menuContent': {

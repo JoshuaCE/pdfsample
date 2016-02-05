@@ -1,5 +1,10 @@
-<ion-view view-title="Browse">
+<ion-view view-title="PDF Viewer - Ionic">
   <ion-content>
-    <h1>Browse</h1>
+    <div class="wrapper" ng-controller="DocCtrl2">
+    	<h1>{{pdfName}}</h1>
+        <ion-scroll zooming="true" direction="xy">
+        <ng-pdf template-url="partials/viewer2.html" canvasid="pdf" scale="1" page=1></ng-pdf>
+        </ion-scroll>
+    </div>
   </ion-content>
 </ion-view>
