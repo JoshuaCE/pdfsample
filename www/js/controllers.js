@@ -49,7 +49,7 @@ angular.module('starter.controllers', ['starter.services'])
 	$scope.session = Session.get({sessionId: $stateParams.sessionId});
 })
 
-.controller('DocCtrl', function($scope){
+.controller('DocCtrl', function($scope,$cordovaPrinter){
 	//$scope.httpHeaders = { Authorization: 'Bearer some-aleatory-token' };
 	$scope.pdfName = 'Relativity: Theory by Albert Einstein';
 	//$scope.pdfUrl = 'http://192.168.1.28:8100/pdf/relativity.pdf';	
@@ -76,6 +76,15 @@ angular.module('starter.controllers', ['starter.services'])
 	}
   
 	$scope.onProgress = function(progress) {
-	  console.log(progress);
+	  //console.log(progress);
 	}
+	
+	//Print
+	$scope.printer = function() {
+        if($cordovaPrinter.isAvailable()) {
+			$cordovaPrinter.print("http://enoahisolution.com");
+        } else {
+            alert("Printing is not available on device");
+        }
+    }
 })

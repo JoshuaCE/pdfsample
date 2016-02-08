@@ -2,6 +2,7 @@
   <ion-content>
     <div class="wrapper" ng-controller="DocCtrl">
     	<h3>{{pdfName}}</h3>
+        <button class="col button button-stable" ng-click="printer()">Print</button>
         <ng-pdf template-url="partials/viewer.html" canvasid="pdf" scale="1" page=1></ng-pdf>        
     </div>
   </ion-content>
